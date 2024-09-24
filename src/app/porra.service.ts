@@ -18,7 +18,7 @@ export class PorraService {
       nombre: 'Crampy',
       puntos: 9,
       imagenUrl:
-        'https://cdn.discordapp.com/avatars/598575140451778614/a_7b44364f1263e3e0dda092a06b0c6847?size=1024',
+        'https://cdn.discordapp.com/avatars/598575140451778614/16252dd7df200b6a05145ce3c83a6073?size=60',
     },
     {
       nombre: 'Man1a',
