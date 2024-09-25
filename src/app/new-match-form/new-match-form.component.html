@@ -1,0 +1,45 @@
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Escudo</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (team of teams; track team.id) {
+    <tr>
+      <td>{{ team.id }}</td>
+      <td>{{ team.name }}</td>
+      <td>
+        <img width="40px" [src]="team.logoUrl" alt="Escudo" />
+      </td>
+    </tr>
+    }
+  </tbody>
+</table> -->
+
+<select name="teams" id="teams" formControlName="teams">
+  <option value="">Seleccione equipo local</option>
+  @for (team of teams; track team.id) {
+  <option [value]="team.id">{{ team.name }}</option>
+  }
+</select>
+<input
+  style="width: 60px; padding: 5px"
+  type="number"
+  min="0"
+  formControlName="goalsLocal"
+/>
+<input
+  style="width: 60px; padding: 5px"
+  type="number"
+  min="0"
+  formControlName="goalsAway"
+/>
+<select name="teams" id="teams" formControlName="teams">
+  <option value="">Seleccione equipo visitante</option>
+  @for (team of teams; track team.id) {
+  <option [value]="team.id">{{ team.name }}</option>
+  }
+</select>

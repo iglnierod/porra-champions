@@ -9,7 +9,7 @@ body {
   color: white;
   background-image: url("https://assets-us-01.kc-usercontent.com/31dbcbc6-da4c-0033-328a-d7621d0fa726/5b1cca65-314d-441d-8577-5ec9da43627e/Apple%20TV%20-%20UEFA%20Champions%20League.png?ver=28-06-2024?w=3840&q=75");
   background-position: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 100%;
 }
 
