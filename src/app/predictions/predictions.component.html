@@ -39,20 +39,20 @@
         />
         <span class="username">{{ prediction.user.name }}</span>
         <div class="match-info">
-          <div class="team">
+          <!-- <div class="team">
             <img
               class="team-badge"
               [src]="prediction.match.localTeam.logoUrl"
             />
-          </div>
+          </div> -->
           <div class="scoreboard">
             <span class="goals">{{ prediction.goalsLocalPrediction }}</span>
             <span class="scoreboard-separator"><b> - </b></span>
             <span class="goals">{{ prediction.goalsAwayPrediction }}</span>
           </div>
-          <div class="team">
+          <!-- <div class="team">
             <img class="team-badge" [src]="prediction.match.awayTeam.logoUrl" />
-          </div>
+          </div> -->
         </div>
       </div>
     </article>
