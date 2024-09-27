@@ -4,15 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class PorraService {
-  private partidos = [
-    {
-      equipoLocal: 'Real Madrid',
-      equipoVisitante: 'Barcelona',
-      resultado: '2-1',
-    },
-    { equipoLocal: 'Liverpool', equipoVisitante: 'PSG', resultado: '1-1' },
-  ];
-
   private puntos = [
     {
       nombre: 'Crampy',
@@ -39,10 +30,6 @@ export class PorraService {
         'https://cdn.discordapp.com/avatars/735105833112830022/fec2fed592df27512186b8260094d22b?size=60',
     },
   ];
-
-  getPartidos() {
-    return this.partidos;
-  }
 
   getPuntos() {
     return this.puntos.sort((a, b) => b.puntos - a.puntos);

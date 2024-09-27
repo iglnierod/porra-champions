@@ -1,45 +1,59 @@
-<!-- <table>
+<form [formGroup]="matchForm" (ngSubmit)="onSubmit()">
+  <!-- Selección de Equipo Local -->
+  <select formControlName="localTeamId">
+    <option value="" disabled>Seleccione equipo local</option>
+    @for(team of teams; track team.id) {
+    <option [value]="team.id">{{ team.name }}</option>
+    }
+  </select>
+
+  <!-- Goles del equipo local -->
+  <input
+    type="number"
+    formControlName="localGoals"
+    placeholder="Goles Local"
+    min="0"
+    style="width: 60px; padding: 5px"
+  />
+
+  <!-- Goles del equipo visitante -->
+  <input
+    type="number"
+    formControlName="awayGoals"
+    placeholder="Goles Visitante"
+    min="0"
+    style="width: 60px; padding: 5px"
+  />
+
+  <!-- Selección de Equipo Visitante -->
+  <select formControlName="awayTeamId">
+    <option value="" disabled>Seleccione equipo visitante</option>
+    @for(team of teams; track team.id) {
+    <option [value]="team.id">{{ team.name }}</option>
+    }
+  </select>
+
+  <!-- Botón de envío -->
+  <button type="submit">Guardar Partido</button>
+</form>
+
+<table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Nombre</th>
-      <th>Escudo</th>
+      <th>Local</th>
+      <th>Resultado</th>
+      <th>Visitante</th>
     </tr>
   </thead>
   <tbody>
-    @for (team of teams; track team.id) {
+    @for(match of matches; track match.id) {
     <tr>
-      <td>{{ team.id }}</td>
-      <td>{{ team.name }}</td>
-      <td>
-        <img width="40px" [src]="team.logoUrl" alt="Escudo" />
+      <td style="text-align: right">{{ match.localTeam.name }}</td>
+      <td style="text-align: center">
+        {{ match.localGoals }} - {{ match.awayGoals }}
       </td>
+      <td style="text-align: left">{{ match.awayTeam.name }}</td>
     </tr>
     }
   </tbody>
-</table> -->
-
-<select name="teams" id="teams" formControlName="teams">
-  <option value="">Seleccione equipo local</option>
-  @for (team of teams; track team.id) {
-  <option [value]="team.id">{{ team.name }}</option>
-  }
-</select>
-<input
-  style="width: 60px; padding: 5px"
-  type="number"
-  min="0"
-  formControlName="goalsLocal"
-/>
-<input
-  style="width: 60px; padding: 5px"
-  type="number"
-  min="0"
-  formControlName="goalsAway"
-/>
-<select name="teams" id="teams" formControlName="teams">
-  <option value="">Seleccione equipo visitante</option>
-  @for (team of teams; track team.id) {
-  <option [value]="team.id">{{ team.name }}</option>
-  }
-</select>
+</table>
