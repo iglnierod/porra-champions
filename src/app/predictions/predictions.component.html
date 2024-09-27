@@ -1,0 +1,62 @@
+<main>
+  <h2>Predicciones</h2>
+  @for(predictionGroup of predictions; track predictionGroup.match.id) {
+  <section class="matches">
+    <article class="match">
+      <div class="match-info">
+        <div class="team">
+          <span class="team-name">{{
+            predictionGroup.match.localTeam.name
+          }}</span>
+          <img
+            class="team-badge"
+            [src]="predictionGroup.match.localTeam.logoUrl"
+          />
+        </div>
+        <div class="scoreboard">
+          <span class="goals">{{ predictionGroup.match.localGoals }}</span>
+          <span class="scoreboard-separator"><b> - </b></span>
+          <span class="goals">{{ predictionGroup.match.awayGoals }}</span>
+        </div>
+        <div class="team">
+          <img
+            class="team-badge"
+            [src]="predictionGroup.match.awayTeam.logoUrl"
+          />
+          <span class="team-name">{{
+            predictionGroup.match.awayTeam.name
+          }}</span>
+        </div>
+      </div>
+    </article>
+    @for(prediction of predictionGroup.predictions; track prediction.id) {
+    <article class="predictions">
+      <div [classList]="prediction.class">
+        <img
+          class="user-image"
+          [src]="prediction.user.imageUrl"
+          [alt]="prediction.user.name"
+        />
+        <span class="username">{{ prediction.user.name }}</span>
+        <div class="match-info">
+          <div class="team">
+            <img
+              class="team-badge"
+              [src]="prediction.match.localTeam.logoUrl"
+            />
+          </div>
+          <div class="scoreboard">
+            <span class="goals">{{ prediction.goalsLocalPrediction }}</span>
+            <span class="scoreboard-separator"><b> - </b></span>
+            <span class="goals">{{ prediction.goalsAwayPrediction }}</span>
+          </div>
+          <div class="team">
+            <img class="team-badge" [src]="prediction.match.awayTeam.logoUrl" />
+          </div>
+        </div>
+      </div>
+    </article>
+    }
+  </section>
+  }
+</main>

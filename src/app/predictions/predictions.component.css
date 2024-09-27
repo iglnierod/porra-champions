@@ -1,0 +1,125 @@
+main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.matches {
+  width: 100%;
+  border-radius: 10px; /* 0.625rem -> 10px */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 15px; /* 0.3125rem 0.9375rem -> 5px 15px */
+}
+
+.match {
+  padding: 10px; /* 0.625rem -> 10px */
+}
+
+.match-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px; /* 0.875rem -> 14px */
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* 0.625rem -> 10px */
+  padding: 5px; /* 0.3125rem -> 5px */
+}
+
+.team-name {
+  font-weight: 500;
+}
+
+.team-badge {
+  width: auto;
+  height: 40px;
+  user-drag: none;
+  user-select: none;
+}
+
+.scoreboard {
+  padding: 3px; /* 0.1875rem -> 3px */
+}
+
+.goals {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px; /* 0.625rem -> 10px */
+  border-radius: 5px; /* 0.3125rem -> 5px */
+  font-size: 16px; /* 1rem -> 16px */
+  font-weight: bold;
+}
+
+.predictions {
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* 0.1875rem -> 3px */
+  padding: 10px 0; /* 0.625rem -> 10px */
+}
+
+.prediction {
+  border-radius: 10px; /* 0.625rem -> 10px */
+  padding: 5px; /* 0.3125rem -> 5px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-image {
+  width: 40px; /* 2.5rem -> 40px */
+  border-radius: 50%;
+  user-drag: none;
+  user-select: none;
+}
+
+.winner {
+  background: linear-gradient(90deg, rgb(10, 83, 10), rgba(54, 119, 54, 0.5));
+}
+
+.loser {
+  background: linear-gradient(90deg, rgb(128, 0, 0), rgba(179, 45, 45, 0.5));
+}
+
+.goat {
+  background: linear-gradient(
+    90deg,
+    rgb(102, 51, 153),
+    rgba(155, 89, 182, 0.5)
+  );
+}
+
+/* Consulta de medios para pantallas menores a 474px */
+@media (max-width: 474px) {
+  body {
+    font-size: 14px; /* 0.875rem -> 14px */
+  }
+
+  .match-info {
+    font-size: 13px; /* 0.8125rem -> 13px */
+  }
+
+  .team-badge,
+  .user-image {
+    height: 30px; /* 1.875rem -> 30px */
+  }
+
+  .goals {
+    font-size: 14px; /* 0.875rem -> 14px */
+  }
+
+  .prediction {
+    padding: 3px; /* 0.1875rem -> 3px */
+  }
+}
+
+@media (max-width: 385px) {
+  .match .team-name {
+    display: none;
+  }
+}

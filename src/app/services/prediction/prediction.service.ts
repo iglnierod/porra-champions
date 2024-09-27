@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class TeamService {
-  // private apiUrl = 'http://localhost:1906/api/teams';
-  private apiUrl = 'https://porra-champions-backend.onrender.com/api/teams';
-
+export class PredictionService {
+  // private apiUrl = 'http://localhost:1906/api/predictions';
+  private apiUrl =
+    'https://porra-champions-backend.onrender.com/api/predictions';
   constructor(private http: HttpClient) {}
 
-  getAllTeams(): Observable<any[]> {
+  getPredictions(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 }

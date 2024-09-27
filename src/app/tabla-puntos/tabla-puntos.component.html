@@ -1,10 +1,12 @@
 <h2>Clasificación</h2>
 <table>
-  @for (participante of puntos; track participante.nombre) {
+  @for (user of ranking; track user.id) {
   <tr>
-    <td><img [src]="participante.imagenUrl" /></td>
-    <td>{{ participante.nombre }}</td>
-    <td>{{ participante.puntos }} pts.</td>
+    <td>
+      <img [src]="user.imageUrl" />
+    </td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.points }} pts.</td>
   </tr>
   }
 </table>
