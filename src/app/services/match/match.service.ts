@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class MatchService {
-  private apiUrl =
-    'http://https://porra-champions-backend.onrender.com/api/matches';
+  private apiUrl = 'https://porra-champions-backend.onrender.com/api/matches';
   constructor(private http: HttpClient) {}
 
   createMatch(match: any): Observable<any> {

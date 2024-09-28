@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class RankingService {
-  private apiUrl =
-    'http://https://porra-champions-backend.onrender.com/api/users';
+  private apiUrl = 'https://porra-champions-backend.onrender.com/api/users';
   constructor(private http: HttpClient) {}
 
   getRanking(): Observable<any[]> {

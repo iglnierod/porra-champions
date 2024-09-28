@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TeamService {
-  private apiUrl =
-    'http://https://porra-champions-backend.onrender.com/api/teams';
+  private apiUrl = 'https://porra-champions-backend.onrender.com/api/teams';
 
   constructor(private http: HttpClient) {}
 

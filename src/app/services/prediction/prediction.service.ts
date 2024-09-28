@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PredictionService {
   private apiUrl =
-    'http://https://porra-champions-backend.onrender.com/api/predictions';
+    'https://porra-champions-backend.onrender.com/api/predictions';
 
   constructor(private http: HttpClient) {}
 
