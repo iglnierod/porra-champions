@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MatchService {
-  // private apiUrl = 'http://localhost:1906/api/matches';
-  private apiUrl = 'https://porra-champions-backend.onrender.com/api/matches';
+  private apiUrl = `${environment.apiUrl}/matches`;
   constructor(private http: HttpClient) {}
 
   createMatch(match: any): Observable<any> {
