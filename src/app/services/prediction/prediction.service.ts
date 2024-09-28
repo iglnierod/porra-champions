@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PredictionService {
-  private apiUrl = `${environment.apiUrl}/predictions`;
+  private apiUrl =
+    'http://https://porra-champions-backend.onrender.com/api/predictions';
 
   constructor(private http: HttpClient) {}
 
